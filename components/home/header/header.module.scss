@@ -2,8 +2,9 @@
   display: grid;
   grid-template-rows: 362px 224px;
   grid-template-columns: 360px 470px 277px;
-  gap: 30px;
+  gap: 23px;
   position: relative;
+  justify-content: center;
 }
 
 .img1{

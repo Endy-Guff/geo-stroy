@@ -1,0 +1,37 @@
+.wrapper{
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title{
+  color: #2C2525;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.svg [data-region]{
+  cursor: pointer;
+}
+
+.infoWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.infoItem{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.text{
+  color: #2C2525;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 220px;
+}

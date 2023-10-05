@@ -2,9 +2,13 @@ import s from './containerLayout.module.scss'
 import {FC, PropsWithChildren} from "react";
 import {HeaderTop} from "../headerTop/headerTop";
 
-export const ContainerLayout: FC<PropsWithChildren> = ({children}) => (
+interface ContainerLayoutProps {
+    showNavigation?: boolean
+}
+
+export const ContainerLayout: FC<PropsWithChildren<ContainerLayoutProps>> = ({children, showNavigation = false}) => (
     <div className={s.wrapper}>
-        <HeaderTop/>
+        {showNavigation && <HeaderTop/>}
         {children}
     </div>
 )

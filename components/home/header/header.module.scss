@@ -1,4 +1,11 @@
 .wrapper{
+  min-height: calc(100vh - 109px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner{
   display: grid;
   grid-template-rows: 362px 224px;
   grid-template-columns: 360px 470px 277px;

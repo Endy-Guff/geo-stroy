@@ -1,0 +1,34 @@
+.wrapper{
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.reverse{
+    flex-direction: row-reverse;
+  }
+}
+.text {
+  color: #110A06;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  max-width: 560px;
+}
+
+.img {
+  border-radius: 30px;
+  max-width: 560px;
+}
+
+.btn{
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+}

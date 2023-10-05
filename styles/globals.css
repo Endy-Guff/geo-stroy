@@ -9,6 +9,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
+    position: relative;
+}
+
+button{
+    padding: 0;
 }
 
 a {

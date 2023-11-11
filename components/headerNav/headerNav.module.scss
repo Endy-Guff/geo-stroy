@@ -1,22 +1,31 @@
-.wrapper{
+.wrapper {
   display: flex;
   align-items: center;
   gap: 65px;
 }
 
-.link{
+.link {
   color: #110A06;
   font-size: 20px;
   position: relative;
 
-  &.active::after{
+  &::after {
     position: absolute;
     bottom: -2px;
-    width: 100%;
+    width: 0;
     content: '';
     height: 1px;
     background: #110A06;
     left: 0;
+    transition: .5s ease-in-out;
   }
-  
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &.active::after {
+    width: 100%;
+  }
+
 }

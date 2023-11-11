@@ -1,0 +1,44 @@
+.wrapper{
+  padding: 50px 0;
+}
+
+.inner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 280px;
+}
+
+.img{
+  border-radius: 50%;
+}
+
+.name{
+  color: #110A06;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.position, .experience{
+  color: #110A06;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.quote{
+  color: #110A06;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.title{
+  margin-bottom: 40px;
+}

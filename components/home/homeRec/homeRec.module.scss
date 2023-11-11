@@ -1,0 +1,26 @@
+.wrapper{
+  padding: 50px 0;
+}
+
+.title{
+  margin-bottom: 30px;
+}
+
+.textBox{
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text{
+  color: #110A06;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+}

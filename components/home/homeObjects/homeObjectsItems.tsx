@@ -13,7 +13,7 @@ export const HomeObjectsItems:FC<PropsWithChildren<HomeObjectsItemsProps>> = ({c
             <div className={s.itemsContainer}>
                 {children}
             </div>
-            <ButtonWithArrow className={s.btn}>Смотреть все</ButtonWithArrow>
+            <ButtonWithArrow className={s.btn} color={'#fff'}>Смотреть все</ButtonWithArrow>
         </div>
     );
 };

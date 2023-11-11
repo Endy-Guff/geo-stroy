@@ -3,6 +3,7 @@ import s from './map.module.scss'
 import {MapMouseListener} from "./mapMouseListener";
 import {MapImg} from "./mapImg";
 import {MapInfo} from "./mapInfo";
+import {Title} from "../../title/title";
 
 export const Map = () => {
     const mapListenerRef = useRef(null)
@@ -52,13 +53,13 @@ export const Map = () => {
     }
     return (
         <div className={s.wrapper}>
-            <div>
-                <h2 className={s.title}>Наша география</h2>
+            <Title className={s.title}>Наша география</Title>
+            <div className={s.inner}>
                 <MapMouseListener ref={mapListenerRef}>
                     <MapImg onMouseEnterHandler={onMouseEnterHandler} onMouseLeaveHandler={onMouseLeaveHandler}/>
                 </MapMouseListener>
+                <MapInfo/>
             </div>
-            <MapInfo/>
         </div>
     );
 };

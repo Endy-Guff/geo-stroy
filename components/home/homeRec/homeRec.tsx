@@ -9,7 +9,7 @@ import Link from "next/link";
 export const HomeRec = () => {
     return (
         <div className={s.wrapper}>
-            <Title className={s.title}>Советы риэлтора</Title>
+            <Title className={s.title}>Полезное</Title>
             <div className={s.content}>
                 <div className={s.textBox}>
                     <p className={s.text}>

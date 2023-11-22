@@ -9,7 +9,7 @@ import Image from "next/image";
 export const AdvicePage = () => {
     return (
         <div className={s.wrapper}>
-            <Title className={s.title}>Советы риэлтора</Title>
+            <Title className={s.title}>Полезное</Title>
             <div className={s.section1}>
                 <div className={s.section1__textBlock}>
                     <p>Здесь мы делимся ценными советами от нашего риэлтора. Мы знаем, что выбор и оформление

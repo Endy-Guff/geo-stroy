@@ -9,7 +9,8 @@ export const Header = () => {
         <div className={s.wrapper}>
             <div className={s.inner}>
                 <div className={s.titleBlock}>
-                    <h2 className={s.title}>Выбирайте Качество: Доверьте Своё Будущее</h2>
+                    <h2 className={s.title}>Многоквартирные жилые проекты:</h2>
+                    <h2 className={s.title2}>комфорт, стиль, качество</h2>
                     <h1 className={s.subtitle}>ГеоСтрой</h1>
                 </div>
                 <div className={s.img1}>

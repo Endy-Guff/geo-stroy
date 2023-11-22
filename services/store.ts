@@ -2,9 +2,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import {baseApi} from "./api/baseApi";
+import {homeObjectsReducer, homeObjectsSlice} from "./homeObjectsSlice";
 
 const reducer = combineReducers({
     [baseApi.reducerPath]: baseApi.reducer,
+    [homeObjectsSlice.name]: homeObjectsReducer
 })
 
 export const store = configureStore({

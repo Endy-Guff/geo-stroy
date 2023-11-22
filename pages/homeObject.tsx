@@ -1,10 +1,13 @@
 import React from 'react';
+import {ContainerLayout} from "../components/containerLayout/containerLayout";
+import {HomeObjectPage} from "../components/homeObject/homeObject";
 
 const HomeObject = () => {
+
     return (
-        <div>
-            HomeObject
-        </div>
+        <ContainerLayout showNavigation={true}>
+            <HomeObjectPage/>
+        </ContainerLayout>
     );
 };
 

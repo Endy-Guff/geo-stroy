@@ -58,3 +58,10 @@
   padding: 15px 20px;
   margin: 35px auto;
 }
+
+.inner{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}

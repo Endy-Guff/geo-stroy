@@ -7,7 +7,6 @@ import image2 from '../assets/images/desc2.jpg'
 import image3 from '../assets/images/desc3.jpg'
 import image4 from '../assets/images/desc4.jpg'
 import image5 from '../assets/images/desc5.jpg'
-import {Team} from "../components/about/Team";
 import {Footer} from "../components/footer/footer";
 
 const About = () => {
@@ -46,7 +45,6 @@ const About = () => {
                 просто здания, а ваш дом, где каждый момент — часть вашей истории.
                 <span style={{fontSize: '32px', fontWeight: 400, display: 'block', marginTop: '10px'}}>Семейные ценности, Качество, ГеоСтрой — ваш надёжный путь к комфортной жизни</span>
             </DescriptionItem>
-            <Team/>
             <Footer/>
         </ContainerLayout>
     );

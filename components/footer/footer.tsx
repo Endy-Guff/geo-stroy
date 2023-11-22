@@ -6,7 +6,7 @@ import image from '../../assets/images/footerMap.jpg'
 
 export const Footer = () => {
     return (
-        <footer className={s.wrapper}>
+        <footer className={s.wrapper} id={'contacts'}>
                 <Title className={s.title}>Контакты</Title>
             <div className={s.inner}>
                 <div className={s.content}>

@@ -2,15 +2,16 @@
 
 html,
 body {
-    background: #fff;
+    background: #453628;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     font-weight: 400;
     position: relative;
+    color: #fff;
 }
 
-button{
+button {
     padding: 0;
 }
 
@@ -26,4 +27,9 @@ a {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+}
+
+p{
+    margin: 0;
+    line-height: 22px;
 }

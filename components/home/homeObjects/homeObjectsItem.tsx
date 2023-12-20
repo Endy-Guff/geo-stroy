@@ -14,7 +14,7 @@ export const HomeObjectsItem: FC<HomeObjectsItemProps> = ({house: {name, address
     const {isLoading, data} = useGetComplexQuery({id})
     return (
         <div className={s.item}>
-            <Image className={s.itemImg} src={img}/>
+            <Image className={s.itemImg} src={img} width={570}/>
             <h6 className={s.adress}>{address}</h6>
             {/*<span className={s.type}>Жилой дом</span>*/}
             <ButtonWithArrow>Смотреть Объект</ButtonWithArrow>

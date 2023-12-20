@@ -5,7 +5,7 @@
 }
 
 .link {
-  color: #110A06;
+  color: #fff;
   font-size: 20px;
   position: relative;
   cursor: pointer;
@@ -15,7 +15,7 @@
     width: 0;
     content: '';
     height: 1px;
-    background: #110A06;
+    background: #fff;
     left: 0;
     transition: .5s ease-in-out;
   }

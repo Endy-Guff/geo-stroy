@@ -4,7 +4,7 @@ interface ArrowIconProps{
     color?: string
 }
 
-export const ArrowIcon:FC<ArrowIconProps> = ({color='#110A06'}) => {
+export const ArrowIcon:FC<ArrowIconProps> = ({color='#fff'}) => {
     return (
         <svg width="62" height="24" viewBox="0 0 62 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

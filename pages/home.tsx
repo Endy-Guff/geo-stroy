@@ -33,9 +33,11 @@ const Home = () => {
                 </ContainerLayout>
             </header>
             <main>
-                <HomeObjects/>
                 <ContainerLayout>
                     <HomeAbout/>
+                </ContainerLayout>
+                <HomeObjects/>
+                <ContainerLayout>
                     <Description/>
                     <Director/>
                     <Map/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './homeObjects.module.scss'
 import Image from "next/image";
-import bg from '../../../assets/images/objectsBg.jpg'
+import bg from '../../../assets/images/objectsBg.png'
 import {Title} from "../../title/title";
 import {ContainerLayout} from "../../containerLayout/containerLayout";
 import {HomeObjectsItems} from "./homeObjectsItems";
@@ -15,7 +15,7 @@ export const HomeObjects = () => {
     const {data} = useGetComplexesQuery()
     const homeObjectsPortfolio = useAppSelector<PortfolioHomeObjectType[]>(state => state.homeObjectsSlice['by-the-centenary'])
     const {data: facades} = useGetFacadesQuery()
-    console.log(facades)
+    console.log(data)
     return (
         <div className={s.wrapper}>
             <Title className={s.title}>Объекты</Title>
@@ -24,19 +24,21 @@ export const HomeObjects = () => {
                 <div className={s.inner} id={'objects'}>
                     <HomeObjectsItems title={'Актуальные Предложения'}>
                         {data?.complexes.map((complex) =>
-                            complex.houses.map(house =>
-                                <HomeObjectsItem key={house.id} house={house}/>
+                            complex.houses.map((house, i) =>
+                                i === 0 ? <HomeObjectsItem key={house.id} house={house}/> : null
                             ))}
                     </HomeObjectsItems>
                     <HomeObjectsItems title={'Портфолио Недвижимости'} showBtn={true} link={'/homeObject'}>
                         <>
                             <div className={s.item}>
-                                <Image className={s.itemImg} width={570} height={299} objectFit={"cover"} src={homeObjectsPortfolio[0].image}/>
+                                <Image className={s.itemImg} width={570} height={299} objectFit={"cover"}
+                                       src={homeObjectsPortfolio[0].image}/>
                                 <h6 className={s.adress}>{homeObjectsPortfolio[0].address}</h6>
                                 <span className={s.type}>{homeObjectsPortfolio[0].name}</span>
                             </div>
                             <div className={s.item}>
-                                <Image className={s.itemImg} width={570} height={299} objectFit={"cover"} src={homeObjectsPortfolio[1].image}/>
+                                <Image className={s.itemImg} width={570} height={299} objectFit={"cover"}
+                                       src={homeObjectsPortfolio[1].image}/>
                                 <h6 className={s.adress}>{homeObjectsPortfolio[1].address}</h6>
                                 <span className={s.type}>{homeObjectsPortfolio[1].name}</span>
                             </div>

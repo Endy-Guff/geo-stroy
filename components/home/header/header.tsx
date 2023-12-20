@@ -9,8 +9,8 @@ export const Header = () => {
         <div className={s.wrapper}>
             <div className={s.inner}>
                 <div className={s.titleBlock}>
-                    <h2 className={s.title}>Многоквартирные жилые проекты:</h2>
-                    <h2 className={s.title2}>комфорт, стиль, качество</h2>
+                    <h2 className={s.title}>Выбирайте Качество:</h2>
+                    <h2 className={s.title2}>Доверьте Своё Будущее</h2>
                     <h1 className={s.subtitle}>ГеоСтрой</h1>
                 </div>
                 <div className={s.img1}>
@@ -21,11 +21,11 @@ export const Header = () => {
                 </div>
                 <div className={s.card}>
                     <h5 className={s.cardTitle}>
-                        ЖК «Победа»
+                        Эксклюзивный ЖК 'Зелёная Роща' - ваш оазис в городе!
                     </h5>
                     <p className={s.cardText}>
-                        Первый дом комфорт-класса в г. Учалы по ул. 65 лет Победы
-                        Лучшие предложения от застройщика!
+                        Современные апартаменты с панорамными окнами и просторными террасами. Уют, дизайн, комфорт — все
+                        для вашей жизни в гармонии с природой и стилем.
                     </p>
                     <button className={s.btn}>Выбрать квартиру</button>
                 </div>

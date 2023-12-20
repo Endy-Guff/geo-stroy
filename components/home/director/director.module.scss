@@ -10,22 +10,22 @@
 }
 
 .name{
-  color: #110A06;
+  color: #fff;
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .desc{
   display: block;
-  color: #787878;
+  color: #D8D8D8;
   font-size: 12px;
   font-weight: 500;
   margin-bottom: 41px;
   position: relative;
 
   &::after{
-    background: #787878;
+    background: #D8D8D8;
     content: '';
     position: absolute;
     width: 100%;
@@ -36,19 +36,22 @@
 }
 
 .subtitle{
-  color: #110A06;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .textBlock{
+  gap: 30px;
   display: flex;
   flex-direction: column;
   max-width: 550px;
 }
 
 .text{
-  color: #110A06;
+  color: #fff;
   font-size: 16px;
   font-weight: 400;
+  line-height: 22px;
 }

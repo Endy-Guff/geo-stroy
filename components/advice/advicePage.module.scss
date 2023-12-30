@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
   padding: 60px 0 100px;
 }
 
@@ -6,13 +6,28 @@
   margin-bottom: 50px;
 }
 
+.img {
+  border-radius: 34px;
+}
+
 .section1 {
   display: flex;
+  margin-bottom: 100px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -50px;
+    width: 100%;
+    height: 1px;
+    background: #787878;
+  }
 
   &__textBlock {
-    color: #110A06;
+    color: #fff;
     max-width: 750px;
     font-size: 16px;
     font-style: normal;
@@ -21,7 +36,16 @@
 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 25px;
+
+    h4 {
+      color: #FFF;
+
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 }
 
@@ -30,6 +54,29 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  h4 {
+    margin-bottom: 10px;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  p {
+    color: #FFF;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
 
   &::after {
     position: absolute;
@@ -50,7 +97,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 25px;
   }
 
   &__name {
@@ -114,6 +161,25 @@
   &__content {
     max-width: 660px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    h4 {
+      color: #FFF;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    p {
+      color: #FFFFFF !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 
   &__title {
@@ -127,7 +193,7 @@
     margin-bottom: 20px;
   }
 
-  &__parts{
+  &__parts {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -148,5 +214,48 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+  }
+}
+
+.section4 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__imgBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__content {
+    h4 {
+      color: #FFF;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .borderText{
+    span{
+      display: block;
+      color: #FFF;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    padding: 20px;
+    border: 1px #fff dashed;
   }
 }

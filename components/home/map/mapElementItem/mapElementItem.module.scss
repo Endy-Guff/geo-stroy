@@ -1,0 +1,46 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title{
+  color: #111;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.img{
+  border-radius: 22px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 257px;
+}
+
+.text{
+  color: #110A06;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.subtext{
+  color: #110A06;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

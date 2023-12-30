@@ -1,5 +1,7 @@
 import React, {FC, forwardRef, PropsWithChildren, useEffect, useImperativeHandle, useRef, useState} from 'react';
 import {MapElement} from "./mapElement/mapElement";
+import {useAppSelector} from "../../../services/store";
+import {IMapElement} from "../../../services/mapElementSlice";
 
 export const MapMouseListener = forwardRef<any, PropsWithChildren>(({children}, ref) => {
     const [mapElementIsShow, setMapElementIsShow] = useState(false)
@@ -26,10 +28,13 @@ export const MapMouseListener = forwardRef<any, PropsWithChildren>(({children}, 
         }
     }
 
+    const mapElementData = useAppSelector<IMapElement[]>(state=>state.mapElementSlice[activeElementIndex])
+
     return (
         <>
-            <div ref={mapElementRef} style={{position: 'absolute', display: mapElementIsShow ? 'block' : 'none'}}>
-                <MapElement elementInfo={{}}/></div>
+            <div ref={mapElementRef} style={{position: 'absolute', zIndex: 999, display: mapElementIsShow ? 'block' : 'none'}}>
+                <MapElement elementInfo={mapElementData}/>
+            </div>
             <div onMouseMove={onMouseMoveHandler}>
                 {children}
             </div>

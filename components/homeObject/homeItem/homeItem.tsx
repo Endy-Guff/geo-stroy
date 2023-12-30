@@ -10,7 +10,7 @@ interface HomeItemProps {
 export const HomeItem: FC<HomeItemProps> = ({item: {image, name, address}}) => {
     return (
         <div className={s.homeItem}>
-            <Image src={image}/>
+            <Image className={s.img} src={image}/>
             <span className={s.name}>{name}</span>
             <span className={s.address}>{address}</span>
         </div>

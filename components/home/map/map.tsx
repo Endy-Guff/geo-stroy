@@ -14,17 +14,9 @@ export const Map = () => {
             return
         }
         switch (region) {
-            case '1':
-                mapListenerRef.current.setMapElementIsShow(true)
-                mapListenerRef.current.setActiveElementIndex(1)
-                break
             case '2':
                 mapListenerRef.current.setMapElementIsShow(true)
                 mapListenerRef.current.setActiveElementIndex(2)
-                break
-            case '3':
-                mapListenerRef.current.setMapElementIsShow(true)
-                mapListenerRef.current.setActiveElementIndex(3)
                 break
             case '4':
                 mapListenerRef.current.setMapElementIsShow(true)
@@ -34,13 +26,41 @@ export const Map = () => {
                 mapListenerRef.current.setMapElementIsShow(true)
                 mapListenerRef.current.setActiveElementIndex(5)
                 break
-            case '6':
-                mapListenerRef.current.setMapElementIsShow(true)
-                mapListenerRef.current.setActiveElementIndex(6)
-                break
             case '7':
                 mapListenerRef.current.setMapElementIsShow(true)
                 mapListenerRef.current.setActiveElementIndex(7)
+                break
+            case '8':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(8)
+                break
+            case '9':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(9)
+                break
+            case '10':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(10)
+                break
+            case '11':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(11)
+                break
+            case '12':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(12)
+                break
+            case '13':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(13)
+                break
+            case '14':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(14)
+                break
+            case '15':
+                mapListenerRef.current.setMapElementIsShow(true)
+                mapListenerRef.current.setActiveElementIndex(15)
                 break
             default:
                 return;

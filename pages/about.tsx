@@ -8,6 +8,7 @@ import image3 from '../assets/images/desc3.jpg'
 import image4 from '../assets/images/desc4.jpg'
 import image5 from '../assets/images/desc5.jpg'
 import {Footer} from "../components/footer/footer";
+import {Awards} from "../components/awards/awards";
 
 const About = () => {
     return (
@@ -43,8 +44,9 @@ const About = () => {
                 Ваше доверие вдохновляет нас стремиться к совершенству. Мы гордимся тем, что можем предложить вам не
                 просто дом, а пространство, в котором создаются воспоминания и растёт будущее. Наша миссия — строить не
                 просто здания, а ваш дом, где каждый момент — часть вашей истории.
-                <span style={{fontSize: '32px', fontWeight: 400, display: 'block', marginTop: '10px'}}>Семейные ценности, Качество, ГеоСтрой — ваш надёжный путь к комфортной жизни</span>
+                <span style={{fontSize: '32px', fontWeight: 400, display: 'block', marginTop: '10px', lineHeight: '32px'}}>Семейные ценности, Качество, ГеоСтрой — ваш надёжный путь к комфортной жизни</span>
             </DescriptionItem>
+            <Awards/>
             <Footer/>
         </ContainerLayout>
     );

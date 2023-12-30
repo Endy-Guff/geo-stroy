@@ -19,8 +19,9 @@
 
     &.tabBtnActive {
       border-radius: 10px;
-      background: #453628;
-      color: #FAEEE6;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #FAEEE6;
     }
   }
 }
@@ -43,7 +44,7 @@
     gap: 7px;
 
     .name {
-      color: #110A06;
+      color: #fff;
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
@@ -51,11 +52,15 @@
     }
 
     .address {
-      color: #110A06;
+      color: #fff;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
     }
   }
+}
+
+.img{
+  border-radius: 34px;
 }

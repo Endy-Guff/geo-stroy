@@ -41,7 +41,9 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <Image className={s.img} src={image} width={560} height={420} style={{objectFit: 'cover'}}/>
+                <div className={s.imgContainer}>
+                    <Image className={s.img} src={image} width={560} height={420} objectFit={'cover'}/>
+                </div>
             </div>
         </footer>
     );

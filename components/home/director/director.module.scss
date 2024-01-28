@@ -1,22 +1,23 @@
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
   padding: 50px 0;
+  gap: 20px;
 }
 
-.img{
+.img {
   max-width: 511px;
   border-radius: 30px;
 }
 
-.name{
+.name {
   color: #fff;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.desc{
+.desc {
   display: block;
   color: #D8D8D8;
   font-size: 12px;
@@ -24,7 +25,7 @@
   margin-bottom: 41px;
   position: relative;
 
-  &::after{
+  &::after {
     background: #D8D8D8;
     content: '';
     position: absolute;
@@ -35,23 +36,71 @@
   }
 }
 
-.subtitle{
+.subtitle {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.textBlock{
+.textBlock {
   gap: 30px;
   display: flex;
   flex-direction: column;
   max-width: 550px;
 }
 
-.text{
+.text {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+
+@media (max-width: 947px) {
+  .content {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 835px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+  .content {
+    max-width: 350px
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+  }
+
+  .textBlock {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .text{
+    font-size: 14px;
+  }
+  .subtitle{
+    font-size: 16px;
+  }
+  .textBlock{
+    gap: 10px;
+  }
 }

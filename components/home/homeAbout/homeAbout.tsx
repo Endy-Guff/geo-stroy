@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './homeAbout.module.scss'
-import {HomeAboutItem} from "./homeAboutItem";
 import {Title} from "../../title/title";
 import aboutIcon from '../../../assets/images/aboutIcon.svg'
 import Image from "next/image";

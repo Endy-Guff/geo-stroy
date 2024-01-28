@@ -9,6 +9,7 @@
   font-size: 20px;
   position: relative;
   cursor: pointer;
+
   &::after {
     position: absolute;
     bottom: -2px;
@@ -28,4 +29,37 @@
     width: 100%;
   }
 
+}
+
+.tel {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 975px) {
+  .wrapper {
+    top: 0;
+    left: 100vw;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #453628;
+    flex-direction: column;
+    justify-content: center;
+    transition: .3s;
+
+    &.open {
+      left: 0;
+    }
+
+    .link {
+      font-size: 30px;
+    }
+
+    .tel {
+      font-size: 30px;
+    }
+  }
 }

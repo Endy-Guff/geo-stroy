@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  gap: 20px;
 
   &::after {
     position: absolute;
@@ -54,6 +55,8 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  gap: 20px;
+
 
   h4 {
     margin-bottom: 10px;
@@ -148,6 +151,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  gap: 20px;
 
   &::after {
     position: absolute;
@@ -222,6 +226,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 
   &__imgBlock {
     display: flex;
@@ -247,8 +252,8 @@
     gap: 25px;
   }
 
-  .borderText{
-    span{
+  .borderText {
+    span {
       display: block;
       color: #FFF;
       font-size: 18px;
@@ -257,5 +262,76 @@
 
     padding: 20px;
     border: 1px #fff dashed;
+  }
+}
+
+@media (max-width: 1065px) {
+  .section1__textBlock {
+    max-width: 500px;
+  }
+
+  .section2__textBlock {
+    max-width: 350px;
+  }
+
+  .section4__content {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 830px) {
+  .section1__textBlock {
+    max-width: 300px;
+    gap: 10px;
+
+    h4 {
+      font-size: 24px;
+    }
+  }
+
+  .section2__textBlock {
+    max-width: 300px;
+  }
+
+  .section4 {
+    flex-direction: column;
+
+    &__imgBlock {
+      flex-direction: row;
+    }
+
+    &__content {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .section1 {
+    flex-direction: column-reverse;
+
+    &__textBlock {
+      max-width: none;
+    }
+  }
+  .section2 {
+    flex-direction: column-reverse;
+
+    &__textBlock {
+      max-width: none;
+    }
+  }
+  .section3 {
+    flex-direction: column-reverse;
+
+    &__textBlock {
+      max-width: none;
+    }
+  }
+
+  .section4 {
+    &__imgBlock {
+      display: none;
+    }
   }
 }

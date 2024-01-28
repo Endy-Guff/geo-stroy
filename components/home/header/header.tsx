@@ -15,6 +15,7 @@ export const Header = () => {
                 </div>
                 <div className={s.img1}>
                     <Image src={image1}/>
+
                 </div>
                 <div className={s.img2}>
                     <Image src={image2}/>

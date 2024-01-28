@@ -1,11 +1,11 @@
 import React from 'react';
 import {Title} from "../title/title";
 import s from './awards.module.scss'
-import {EffectCoverflow, Pagination, Navigation} from 'swiper/modules';
+import {EffectCoverflow, Navigation} from 'swiper/modules';
 import Image from "next/image";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import awardsImg1 from '../../assets/images/awards1.jpg'
 import awardsImg2 from '../../assets/images/awards2.jpg'
 import awardsImg3 from '../../assets/images/awards3.jpg'
@@ -66,9 +66,8 @@ export const Awards = () => {
                     depth: 100,
                     modifier: 1,
                 }}
-                pagination={true}
                 navigation={true}
-                modules={[EffectCoverflow, Pagination, Navigation]}
+                modules={[EffectCoverflow, Navigation]}
                 className={s.swiper}
             >
                 {images.map(({img, id}) => <SwiperSlide style={{width: 330, height: 500}} key={id}>

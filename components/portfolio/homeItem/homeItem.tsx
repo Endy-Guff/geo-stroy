@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import s from '../homeObject.module.scss'
-import {PortfolioHomeObjectType} from "../../../services/homeObjectsSlice";
+import {PortfolioHomeObjectType} from "../../../services/homeObjectsPortfolioSlice";
 import Image from "next/image";
 
 interface HomeItemProps {

@@ -8,7 +8,6 @@ export default function Home() {
     useEffect(()=>{
         Router.push('/home')
     }, [])
-
     return (
         <div className={styles.container}>
             <Head>

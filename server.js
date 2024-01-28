@@ -38,7 +38,7 @@ app.use("/api/getFacades", async (req, res) => {
     const timestamp = Date.now();
     const token = md5(domain + timestamp + app_secret);
     try {
-        const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getFloorPlans?domain=${domain}&time=${timestamp}&token=${token}`);
+        const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getFacades?domain=${domain}&time=${timestamp}&token=${token}`);
         console.log(response.data)
         res.send(response.data);
     } catch (e) {

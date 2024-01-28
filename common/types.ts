@@ -1,15 +1,36 @@
 export interface GetComplexesResponseType {
-	complexes: ComplexType[];
+	complexes: IComplexResponse[];
 }
-export interface ComplexHouseType {
+export interface IHouseResponse {
 	id: number;
 	name: string;
 	address: string;
 }
-export interface ComplexType {
+
+export interface IComplexResponse {
+	id: number
+	name: string
+	houses: IHouseResponse[]
+}
+
+export interface IHouseImage {
 	id: number;
+	estate_id: number;
+	file_name: string;
+	file_url: string;
+	file_ext: string;
+	date_added: string;
 	name: string;
-	houses: ComplexHouseType[];
+	entrance: string;
+}
+
+
+export interface IHouse extends IHouseResponse {
+	images: IHouseImage[]
+}
+
+export interface IComplex extends Omit<IComplexResponse, 'houses'> {
+	houses: IHouse[]
 }
 
 export type GetComplexResponseType = ComplexFullType[]

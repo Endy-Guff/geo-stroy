@@ -14,7 +14,7 @@ export const ButtonWithArrow:FC<PropsWithChildren<ButtonWithArrowProps>> = ({chi
     return (
         <button className={classNames} {...restProps}>
             {children}
-            <ArrowIcon color={color}/>
+            <ArrowIcon className={s.icon} color={color}/>
         </button>
     );
 };

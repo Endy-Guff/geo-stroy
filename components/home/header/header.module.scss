@@ -1,11 +1,11 @@
-.wrapper{
+.wrapper {
   min-height: calc(100vh - 109px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.inner{
+.inner {
   display: grid;
   grid-template-rows: 362px 224px;
   grid-template-columns: 360px 470px 277px;
@@ -14,16 +14,16 @@
   justify-content: center;
 }
 
-.img1{
+.img1 {
   grid-column: 1 / 3;
 }
 
-.img3{
+.img3 {
   grid-column: 3 / -1;
   grid-row: 1 / -1;
 }
 
-.card{
+.card {
   grid-column: 2 / 3;
   background: #FAEEE6;
   border-radius: 30px;
@@ -33,7 +33,7 @@
   justify-content: space-between;
 }
 
-.title{
+.title {
   color: #fff;
   font-size: 42px;
   font-weight: 500;
@@ -42,7 +42,7 @@
   margin: 20px 0;
 }
 
-.title2{
+.title2 {
   color: #fff;
   font-size: 42px;
   font-style: normal;
@@ -53,7 +53,7 @@
   margin-bottom: 15px;
 }
 
-.subtitle{
+.subtitle {
   color: #fff;
   font-size: 55px;
   font-weight: 500;
@@ -62,25 +62,25 @@
   margin: 0;
 }
 
-.titleBlock{
+.titleBlock {
   position: absolute;
   max-width: 625px;
 }
 
-.cardTitle{
+.cardTitle {
   color: #110A06;
   font-size: 16px;
   font-weight: 600;
 }
 
-.cardText{
+.cardText {
   color: #110A06;
   font-size: 16px;
   font-weight: 500;
   max-width: 350px;
 }
 
-.btn{
+.btn {
   display: block;
   border-radius: 10px;
   background: #453628;
@@ -89,4 +89,85 @@
   margin-left: auto;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 1195px) {
+  .img3 {
+    display: none;
+  }
+  .img2 {
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
+  }
+  .inner {
+    grid-template-columns: 360px 470px;
+  }
+}
+
+@media (max-width: 874px) {
+  .img2 {
+    display: none;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titleBlock {
+    top: 0;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .title, .title2 {
+    font-size: 33px;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 712px) {
+  .title, .title2 {
+    margin-bottom: 5px;
+    font-size: 23px;
+  }
+  .subtitle {
+    font-size: 30px;
+  }
+  .btn {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 522px) {
+  .wrapper {
+    min-height: calc(100vh - 200px);
+  }
+  .title {
+    margin: 0;
+    font-size: 19px;
+  }
+  .title2 {
+    font-size: 19px;
+  }
+  .subtitle {
+    font-size: 23px;
+  }
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 411px) {
+  .title, .title2 {
+    font-size: 16px;
+  }
+  .subtitle {
+    font-size: 19px;
+  }
 }

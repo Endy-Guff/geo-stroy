@@ -167,8 +167,8 @@ const initialState: HomeObjectsSliceInitialStateType = {
     ]
 }
 
-export const homeObjectsSlice = createSlice({
-    name: 'homeObjectsSlice',
+export const homeObjectsPortfolioSlice = createSlice({
+    name: 'homeObjectsPortfolioSlice',
     initialState,
     reducers: {}
 })
@@ -188,4 +188,4 @@ export interface PortfolioHomeObjectType {
     address: string
 }
 
-export const homeObjectsReducer = homeObjectsSlice.reducer
+export const homeObjectsPortfolioReducer = homeObjectsPortfolioSlice.reducer

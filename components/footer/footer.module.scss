@@ -52,3 +52,31 @@
 .img{
   border-radius: 30px;
 }
+
+@media (max-width: 950px) {
+  .imgContainer{
+    display: none;
+  }
+
+  .inner{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .subtitle{
+    font-size: 23px;
+  }
+  .item{
+    gap: 7px;
+  }
+}
+
+@media (max-width: 450px) {
+  .subtitle{
+    font-size: 20px;
+  }
+  .content{
+    gap: 10px;
+  }
+}

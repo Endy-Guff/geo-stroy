@@ -9,3 +9,19 @@
   align-items: center;
   gap: 10px;
 }
+
+@media (max-width: 668px) {
+  .btn {
+    font-size: 14px;
+  }
+
+  .icon{
+    width: 35px;
+  }
+}
+
+@media (max-width: 547px) {
+  .btn{
+    font-size: 14px;
+  }
+}

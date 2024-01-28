@@ -20,7 +20,7 @@ export const HomeRec = () => {
                         <ButtonWithArrow>Читать подробнее</ButtonWithArrow>
                     </Link>
                 </div>
-                <Image src={image}/>
+                <Image className={s.img} src={image} objectFit={'cover'}/>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import directorPhoto from '../../../assets/images/director.jpg'
 export const Director = () => {
     return (
         <div className={s.wrapper}>
-            <Image className={s.img} src={directorPhoto} alt={"фото директора"}/>
+            <Image className={s.img} src={directorPhoto} alt={"фото директора"} objectFit={'cover'}/>
             <div className={s.content}>
                 <h5 className={s.name}>Хажиев Рустам Дарикович</h5>
                 <span className={s.desc}>Руководитель группы компаний ГЕО, в том числе ООО «ГеоСтрой»</span>

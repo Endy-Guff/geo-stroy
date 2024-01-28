@@ -1,14 +1,14 @@
 import React from 'react';
 import {ContainerLayout} from "../components/containerLayout/containerLayout";
-import {HomeObjectPage} from "../components/homeObject/homeObject";
+import {PortfolioPage} from "../components/portfolio/portfolio";
 
-const HomeObject = () => {
+const Portfolio = () => {
 
     return (
         <ContainerLayout showNavigation={true}>
-            <HomeObjectPage/>
+            <PortfolioPage/>
         </ContainerLayout>
     );
 };
 
-export default HomeObject;
+export default Portfolio;

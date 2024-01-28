@@ -1,4 +1,5 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+import axios from "axios";
 
 export const baseApi = createApi({
     reducerPath: 'baseApi',
@@ -7,3 +8,7 @@ export const baseApi = createApi({
     }),
     endpoints: () => ({}),
 })
+
+export const instance = axios.create({
+    baseURL: "http://localhost:3001/api",
+});

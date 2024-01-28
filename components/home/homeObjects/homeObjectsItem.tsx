@@ -9,7 +9,7 @@ import {IHouse} from "../../../common/types";
 
 interface HomeObjectsItemProps {
     house: IHouse
-    onClick: (e?: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    onClick?: (e?: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 export const HomeObjectsItem: FC<HomeObjectsItemProps> = ({onClick, house: {name, address, id, images}}) => {

@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {useAppSelector} from "../../services/store";
 import {findHouseById} from "../../utils";
 import axios from "axios";
@@ -10,24 +10,22 @@ export interface IHomeObjectProps {
 }
 
 export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
+    const [svg, setSvg] = useState<any[]>(null)
     const complexes = useAppSelector((state) => state.complexesSlice)
     const house = findHouseById(complexes, Number(id))
-    const images = house?.images?.filter(image => image.file_ext === 'svg')
-    let image = images?.[0]?.file_url
+    const images = house?.images?.filter(image => image.file_ext === 'svg').map((image) => axios.get(image.file_url))
     useEffect(() => {
-        if (images?.[0]?.file_url) {
-            axios.get(images?.[0]?.file_url).then(res => {
-                image = res.data
-                console.log(res.data)
-            })
+        if (images) {
+            Promise.all(images).then(res => setSvg(res))
         }
-    })
-    console.log(image)
+    }, [house])
+    console.log(svg)
     return (
-        <div>
-            <ReactSVG src={image}/>
-            <object data={image} type="image/svg+xml"></object>
-
+        <div style={{position: 'relative', width: '100%', height: '100%', maxWidth: 1920, maxHeight: 1080}}>
+            {svg?.map((svg) => <div
+                style={{position: 'absolute', width: '100%', height: '100%', maxWidth: 1920, maxHeight: 1080}}
+                onClick={(e) => console.log(e.target)}
+                dangerouslySetInnerHTML={{__html: svg.data}}></div>)}
         </div>
     );
 };

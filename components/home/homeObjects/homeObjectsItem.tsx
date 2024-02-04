@@ -12,7 +12,7 @@ interface HomeObjectsItemProps {
     onClick?: (e?: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-export const HomeObjectsItem: FC<HomeObjectsItemProps> = ({onClick, house: {name, address, id, images}}) => {
+export const HomeObjectsItem: FC<HomeObjectsItemProps> = ({onClick, house: {address, id, images}}) => {
     // const {isLoading, data} = useGetComplexQuery({id})
 
     const image = images.length ? images.find(img => img.file_ext === 'jpg').file_url : img

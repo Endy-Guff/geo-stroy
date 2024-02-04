@@ -6,12 +6,18 @@ import byTheCentenaryImg4 from '../assets/images/by-the-centenary-4.jpg'
 import byTheCentenaryImg5 from '../assets/images/by-the-centenary-5.jpg'
 import byTheCentenaryImg6 from '../assets/images/by-the-centenary-6.jpg'
 import byTheCentenaryImg7 from '../assets/images/by-the-centenary-7.jpg'
-import byTheCentenaryImg8 from '../assets/images/by-the-centenary-8.jpg'
 
 import residentialEstateImg1 from '../assets/images/residential-estate-1.jpg'
 import residentialEstateImg2 from '../assets/images/residential-estate-2.jpg'
 import residentialEstateImg3 from '../assets/images/residential-estate-3.jpg'
 import residentialEstateImg4 from '../assets/images/residential-estate-4.jpg'
+import residentialEstateImg5 from '../assets/images/residential-estate-5.jpg'
+import residentialEstateImg6 from '../assets/images/residential-estate-6.jpg'
+import residentialEstateImg7 from '../assets/images/residential-estate-7.jpg'
+import residentialEstateImg8 from '../assets/images/residential-estate-8.jpg'
+import residentialEstateImg9 from '../assets/images/residential-estate-9.jpg'
+import residentialEstateImg10 from '../assets/images/residential-estate-10.jpg'
+import residentialEstateImg11 from '../assets/images/residential-estate-11.jpg'
 
 import socialEstateImg1 from '../assets/images/social-estate-1.jpg'
 import socialEstateImg2 from '../assets/images/social-estate2.jpg'
@@ -23,6 +29,8 @@ import socialEstateImg7 from '../assets/images/social-estate-7.jpg'
 import socialEstateImg8 from '../assets/images/social-estate-8.jpg'
 import socialEstateImg9 from '../assets/images/social-estate-9.jpg'
 import socialEstateImg10 from '../assets/images/social-estate-10.jpg'
+import socialEstateImg11 from '../assets/images/social-estate-11.jpg'
+import socialEstateImg12 from '../assets/images/social-estate-12.jpg'
 import {StaticImageData} from "next/image";
 
 const initialState: HomeObjectsSliceInitialStateType = {
@@ -62,11 +70,6 @@ const initialState: HomeObjectsSliceInitialStateType = {
             name: 'Школа на 80 ученических мест с детским садом на 40 мест',
             address: 'Кигинский район, с. Леуза'
         },
-        {
-            image: byTheCentenaryImg8,
-            name: 'Строительство хирургического корпуса ЦГБ',
-            address: 'Учалинский район, г. Учалы'
-        }
     ],
     'residential-estate': [
         {
@@ -76,7 +79,14 @@ const initialState: HomeObjectsSliceInitialStateType = {
         },
         {image: residentialEstateImg2, name: 'Многоквартирный жилой дом', address: 'г. Туймазы, Проспект Ленина д2В'},
         {image: residentialEstateImg3, name: 'Многоквартирный жилой дом', address: 'г. Туймазы, ул.Советская д.16'},
-        {image: residentialEstateImg4, name: 'Многоквартирный жилой дом', address: 'г. Нефтекамск,  д.26'}
+        {image: residentialEstateImg4, name: 'Многоквартирный жилой дом', address: 'г. Нефтекамск,  д.26'},
+        {image: residentialEstateImg5, name: 'Многоквартирный жилой дом', address: 'г. Нефтекамск, ул. Городская  д. 32'},
+        {image: residentialEstateImg6, name: 'Многоквартирный жилой дом', address: 'г. Нефтекамск, ул. Городская д. 29'},
+        {image: residentialEstateImg7, name: 'Многоквартирный жилой дом', address: ' с. Бураево ул.Вострецова 24'},
+        {image: residentialEstateImg8, name: 'Многоквартирный жилой дом', address: 'с. Калтасы, ул. Кооперативная д. 26'},
+        {image: residentialEstateImg9, name: 'Многоквартирный жилой дом', address: 'Калтасинский район, с. Краснохолмский, ул.Комсомольская , д.4 и д.6'},
+        {image: residentialEstateImg10, name: 'Многоквартирный жилой дом', address: 'Янаул'},
+        {image: residentialEstateImg11, name: 'Многоквартирный жилой дом', address: 'Янаул, мкрн. Южный'}
     ],
     'social-estate': [
         {
@@ -163,6 +173,16 @@ const initialState: HomeObjectsSliceInitialStateType = {
             image: socialEstateImg10,
             name: 'Школа на 60 ученических мест с детским садом на 25 мест',
             address: 'Караидельский район с. Новомуллакаево'
+        },
+        {
+            image: socialEstateImg11,
+            name: 'Комплексная застройка и благоустройство квартала Италмаз ',
+            address: 'Янаульский район, с. Шудек'
+        },
+        {
+            image: socialEstateImg12,
+            name: 'Детский сад на 220 мест ',
+            address: 'г. Нефтекамск мкрн №25, пр.Комсомольский ,д.41Г'
         },
     ]
 }

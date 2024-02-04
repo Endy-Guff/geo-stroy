@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import s from './homeObjects.module.scss'
 import Image from "next/image";
 import bg from '../../../assets/images/objectsBg.png'
@@ -13,7 +13,8 @@ import {PortfolioHomeObjectType} from "../../../services/homeObjectsPortfolioSli
 import {useRouter} from "next/router";
 
 export const HomeObjects = () => {
-        const router = useRouter();
+    const [, forceUpdate] = useState();
+    const router = useRouter();
         const dispatch = useAppDispatch()
         const {fetchComplexes, fetchFacades} = complexesThunks
         const homeObjectsPortfolio = useAppSelector<PortfolioHomeObjectType[]>(state => state.homeObjectsPortfolioSlice['by-the-centenary'])
@@ -36,6 +37,7 @@ export const HomeObjects = () => {
                                      onClick={() => router.push(`/homeObject/${house.id}`)}/> : null
         )
 
+        if (!complexes.length) return
 
         return (
             <div className={s.wrapper}>

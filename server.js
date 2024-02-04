@@ -9,7 +9,7 @@ const domain = 'geostroi.company';
 const app_secret = 'V6Krvyzrbe8S5DzTll6vln92m8DbrmyybQbg';
 app.use(cors())
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 5000
 app.use("/api/getComplexes", async (req, res) => {
     const timestamp = Date.now();
     const token = md5(domain + timestamp + app_secret);

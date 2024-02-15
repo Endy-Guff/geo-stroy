@@ -8,50 +8,62 @@ const app = express();
 const domain = 'geostroi.company';
 const app_secret = 'V6Krvyzrbe8S5DzTll6vln92m8DbrmyybQbg';
 app.use(cors())
+app.use(express.json());
 
 const port = process.env.PORT || 5000
 app.use("/api/getComplexes", async (req, res) => {
-    const timestamp = Date.now();
-    const token = md5(domain + timestamp + app_secret);
-    try {
-        const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getComplexes?domain=${domain}&time=${timestamp}&token=${token}`);
-        res.send(response.data);
-    } catch (e) {
-        console.log(e)
-    }
+  const timestamp = Date.now();
+  const token = md5(domain + timestamp + app_secret);
+  try {
+    const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getComplexes?domain=${domain}&time=${timestamp}&token=${token}`);
+    res.send(response.data);
+  } catch (e) {
+    console.log(e)
+  }
 });
 
 app.use("/api/getComplex/:id", async (req, res) => {
-    const id = req.params.id
-    const timestamp = Date.now();
-    const token = md5(domain + timestamp + app_secret);
-    try {
-        const response = await axios.get(`https://api.macro.sbercrm.com/estate/get?domain=${domain}&time=${timestamp}&token=${token}&type=living&parent_ids=${id}`);
-        res.send(response.data);
-    } catch (e) {
-        console.log(e)
-    }
+  const id = req.params.id
+  const timestamp = Date.now();
+  const token = md5(domain + timestamp + app_secret);
+  try {
+    const response = await axios.get(`https://api.macro.sbercrm.com/estate/get?domain=${domain}&time=${timestamp}&token=${token}&type=living&parent_ids=${id}`);
+    res.send(response.data);
+  } catch (e) {
+    console.log(e)
+  }
 });
 
 
 app.use("/api/getFacades", async (req, res) => {
-    const timestamp = Date.now();
-    const token = md5(domain + timestamp + app_secret);
-    try {
-        const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getFacades?domain=${domain}&time=${timestamp}&token=${token}`);
-        console.log(response.data)
-        res.send(response.data);
-    } catch (e) {
-        console.log(e)
-    }
+  const timestamp = Date.now();
+  const token = md5(domain + timestamp + app_secret);
+  try {
+    const response = await axios.get(`https://api.macro.sbercrm.com/estate/group/getFacades?domain=${domain}&time=${timestamp}&token=${token}`);
+    res.send(response.data);
+  } catch (e) {
+    console.log(e)
+  }
 });
+
+app.post('/api/submit', async (req, res) => {
+  const {name, phone, email, message} = req.body;
+  const timestamp = Date.now();
+  const token = md5(domain + timestamp + app_secret);
+  try {
+    const response = await axios.get(`https://api.macro.sbercrm.com/estate/request?domain=${domain}&time=${timestamp}&token=${token}&action=question&name=${name}&phone=${phone}&email=${email}&message=${message}`);
+    res.send(response.data);
+  } catch (e) {
+    console.log(e)
+  }
+})
 
 app.use('/', express.static(path.join(__dirname, 'out')))
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'out', 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'out', 'index.html'))
 })
 
 app.listen(port, () => {
-    console.log(`Proxy server listening on port ${port}`);
+  console.log(`Proxy server listening on port ${port}`);
 });

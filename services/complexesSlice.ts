@@ -28,7 +28,7 @@ export const complexesSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchComplexes.fulfilled, (_, action) => {
-                    const complexes: IComplex[] = action.payload.complexes.map(complex => ({
+                    const complexes: IComplex[] = action.payload.complexes?.map(complex => ({
                         ...complex,
                         houses: complex.houses.map(house => ({...house, images: [] as IHouseImage[ ]}))
                     }))

@@ -34,5 +34,6 @@ import {GetComplexesResponseType, GetComplexResponseType, IHouseImage} from "../
 
 export const complexesApi = {
     getComplexes: () => instance.get<GetComplexesResponseType>('/getComplexes'),
+    getComplex: (id: string) => instance.get<any>(`/getComplex/${id}`),
     getFacades: () => instance.get<IHouseImage[]>('/getFacades'),
 }

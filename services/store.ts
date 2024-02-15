@@ -5,10 +5,12 @@ import {baseApi} from "./api/baseApi";
 import {homeObjectsPortfolioReducer, homeObjectsPortfolioSlice} from "./homeObjectsPortfolioSlice";
 import {mapElementReducer, mapElementSlice} from "./mapElementSlice";
 import {complexesSlice, complexesSliceReducer} from "./complexesSlice";
+import {complexSlice, complexSliceReducer} from "./complexSlice";
 
 const reducer = combineReducers({
     [baseApi.reducerPath]: baseApi.reducer,
     [complexesSlice.name]: complexesSliceReducer,
+    [complexSlice.name]: complexSliceReducer,
     [homeObjectsPortfolioSlice.name]:
     homeObjectsPortfolioReducer,
     [mapElementSlice.name]:

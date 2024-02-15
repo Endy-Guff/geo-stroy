@@ -1,0 +1,94 @@
+.svgWrapper {
+  svg path {
+    fill: rgba(190, 106, 158, .5);
+    cursor: pointer;
+    &:hover{
+      fill: rgba(190, 106, 158, .9);
+    }
+  }
+}
+.address{
+  font-size: 32px;
+  position: relative;
+  width: 100%;
+  line-height: 40px;
+
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    background: #787878;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.title{
+  margin: 50px 0;
+}
+
+.link{
+  background: #FAEEE6;
+  color: #453628;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 320px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnBlock{
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.btn{
+  color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid #FAEEE6;
+  width: 320px;
+  height: 70px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .address{
+    font-size: 18px;
+    padding: 10px 0 !important;
+  }
+  .btn,.link{
+    font-size: 16px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 566px) {
+  .address{
+    font-size: 14px;
+    padding: 10px 0 !important;
+  }
+  .btn,.link{
+    font-size: 12px;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+  }
+  .btnBlock{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .address{
+    line-height: 20px;
+  }
+}

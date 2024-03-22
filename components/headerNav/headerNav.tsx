@@ -39,7 +39,7 @@ export const HeaderNav: FC<IHeaderNavProps> = ({navIsOpen, onNavIsClose}) => {
                             query: {fromOtherPage: true, path: path.replace(/^\/(.*)$/, '$1')},
                         })
                     }}>{title}</span>))}
-            <a className={s.tel} href="tel:+7999987234">+7 999 987-23-4</a>
+            <a className={s.tel} href="tel:+73472926141">+7(347) 292-61-41</a>
         </div>
     );
 };

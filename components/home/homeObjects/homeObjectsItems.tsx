@@ -16,7 +16,7 @@ export const HomeObjectsItems: FC<PropsWithChildren<HomeObjectsItemsProps>> = ({
             <div className={s.itemsContainer}>
                 {children}
             </div>
-            {showBtn && <Link href={link}><ButtonWithArrow className={s.btn} color={'#fff'}>Смотреть
+            {showBtn && <Link href={link}><ButtonWithArrow className={s.btn} color={'#19297C'}>Смотреть
                 все</ButtonWithArrow></Link>}
         </div>
     );

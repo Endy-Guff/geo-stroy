@@ -9,7 +9,7 @@ export const Director = () => {
             <Image className={s.img} src={directorPhoto} alt={"фото директора"} objectFit={'cover'}/>
             <div className={s.content}>
                 <h5 className={s.name}>Хажиев Рустам Дарикович</h5>
-                <span className={s.desc}>Руководитель группы компаний ГЕО, в том числе ООО «ГеоСтрой»</span>
+                <span className={s.desc}>Руководитель группы компаний «ГеоСтрой»</span>
                 <h6 className={s.subtitle}>Дорогие друзья и уважаемые посетители нашего сайта,</h6>
                 <div className={s.textBlock}>
                     <p className={s.text}>

@@ -14,8 +14,8 @@ export const Footer = () => {
                         <div className={s.item}>
                             <h5 className={s.subtitle}>Офис “ГеоСтрой” г.Уфа (Главный офис)</h5>
                             <p className={s.text}>ул. Самаркандская, 1/4</p>
-                            <p className={s.text}><a href="tel:+79999876543">+7 (999) 987-65-43</a></p>
-                            <p className={s.text}><a href="mailto:+79999876543">geostroy@mail.ru</a></p>
+                            <p className={s.text}><a href="tel:+73472926141">+7(347) 292-61-41</a></p>
+                            <p className={s.text}><a href="mailto:geostroi.smr@yandex.ru">geostroi.smr@yandex.ru</a></p>
                         </div>
                         <div className={s.item}>
                             <h5 className={s.subtitle}>г. Белорецк</h5>
@@ -44,6 +44,32 @@ export const Footer = () => {
                 <div className={s.imgContainer}>
                     <Image className={s.img} src={image} width={560} height={420} objectFit={'cover'}/>
                 </div>
+            </div>
+            <div className={s.subFooter} style={{marginTop: '140px'}}>
+                <p style={{
+                    fontSize: '24px',
+                    textAlign: 'center',
+                    lineHeight: '30px',
+                    maxWidth: '900px',
+                    margin: '0 auto',
+                    fontWeight: '400',
+                    marginBottom: '30px'
+                }}>
+                    Общество с ограниченной ответственностью «ГеоСтрой»
+                    ИНН 0277114858
+                    ОГРН 1110280009234
+                    450105, Республика Башкортостан, г.Уфа, ул. Самаркандская, д.1/4, офис 205
+                </p>
+                <p
+                    style={{
+                        fontSize: '24px',
+                        textAlign: 'center',
+                        lineHeight: '30px',
+                        maxWidth: '900px',
+                        margin: '0 auto',
+                        fontWeight: '600'
+                    }}
+                >Не является офертой</p>
             </div>
         </footer>
     );

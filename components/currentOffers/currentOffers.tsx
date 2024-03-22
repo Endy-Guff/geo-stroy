@@ -10,7 +10,8 @@ import {useRouter} from "next/router";
 const tabs: ITabsOption[] = [
     {id: 1, label: 'г. Учалы', value: 'учалы'},
     {id: 2, label: 'г. Белорецк', value: 'белорецк'},
-    {id: 3, label: 'г. Уфа', value: 'уфа'},
+    {id: 3, label: 'г. Янаул', value: 'янаул'},
+    {id: 4, label: 'г. Сухбанкулово', value: 'сухбанкулово'},
 ]
 
 export const CurrentOffersPage = () => {

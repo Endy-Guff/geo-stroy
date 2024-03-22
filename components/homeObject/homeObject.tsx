@@ -112,7 +112,7 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
             </div>
             <p className={s.address}
                style={{textAlign: 'center', fontWeight: 400, padding: '50px 0'}}>{house?.address}</p>
-            {floorPlane && <Title className={s.title}>План квартиры</Title>}
+            {floorPlane && <Title className={s.title}>План этажа</Title>}
             {floorPlane &&
               <Image src={floorPlane} width={windowWidth - minus} height={calculateHeight(windowWidth - minus)}/>}
             <div className={s.btnBlock}>

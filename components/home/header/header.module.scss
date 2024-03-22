@@ -145,6 +145,9 @@
 }
 
 @media (max-width: 522px) {
+  .inner{
+    gap: 10px;
+  }
   .wrapper {
     min-height: calc(100vh - 200px);
   }

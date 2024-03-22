@@ -48,6 +48,9 @@
     grid-column: 2 / 3;
     background: #D9DFFF;
     border-radius: 15px 15px 0 0;
+    & span{
+      color: #19297C;
+    }
   }
 
   &_2 {

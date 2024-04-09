@@ -46,24 +46,24 @@
   &_1 {
     grid-row: 1 / 4;
     grid-column: 2 / 3;
-    background: #D9DFFF;
+    background: #DCDCDC;
     border-radius: 15px 15px 0 0;
     & span{
-      color: #19297C;
+      color: #282828;
     }
   }
 
   &_2 {
     grid-row: 2 / 5;
     grid-column: 3 / -1;
-    background: #203DD5;
+    background: #B1B1B1;
     border-radius: 0 15px 0 0;
   }
 
   &_3 {
     grid-row: 3 / 6;
     grid-column: 1 / 2;
-    background: #001CAF;
+    background: #535456;
     border-radius: 15px 0 0 15px;
     position: relative;
 
@@ -76,14 +76,14 @@
   &_4 {
     grid-row: 4 / 8;
     grid-column: 2 / 3;
-    background: #000F5C;
+    background: #282929;
     border-radius: 0 0 15px 15px;
   }
 
   &_5 {
     grid-row: 5 / 7;
     grid-column: 3 / -1;
-    background: #7085F4;
+    background: #6A6D72;
     border-radius: 0 0 15px 0;
   }
 }

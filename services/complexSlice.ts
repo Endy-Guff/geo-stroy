@@ -2,8 +2,9 @@ import {createSlice} from "@reduxjs/toolkit";
 import {IComplex, IComplexResponse, IHouseImage} from "../common/types";
 import {createAppAsyncThunk} from "../common/createAppAsyncThunk";
 import {complexesApi} from "./api/complexesApi";
+import {IComplexData} from "./types";
 
-const initialState: any = []
+const initialState: IComplexData[] = []
 
 const fetchComplex = createAppAsyncThunk<{ complex: any }, { id: string }>(
     "complexesSlice/fetchComplexes",

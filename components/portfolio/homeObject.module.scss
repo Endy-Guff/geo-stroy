@@ -64,6 +64,9 @@
 }
 
 .img {
+  object-fit: cover;
+  aspect-ratio: 180/137;
+  cursor: pointer;
   border-radius: 34px;
 }
 

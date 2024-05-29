@@ -8,6 +8,9 @@ import {complexThunks} from "../../services/complexSlice";
 import {Title} from "../title/title";
 import {Modal, Values} from "./modal";
 import {instance} from "../../services/api/baseApi";
+import cn from 'clsx'
+import {ITableColumns, Table} from "../table/table";
+import {IComplexData} from "../../services/types";
 
 export interface IHomeObjectProps {
     id: string
@@ -31,11 +34,10 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
     const house = findHouseById(complexes, Number(id))
     const images = house?.images?.filter(image => image.file_ext === 'svg').map((image) => axios.get(image.file_url))
     const fassadimg = house?.images?.find(image => image.file_ext === 'jpg')?.file_url
-    const [floorPlane, setFloorPanel] = useState()
+    const [floorPlane, setFloorPanel] = useState('')
 
     const [windowWidth, setWindowWidth] = useState(0);
     const [minus, setMinus] = useState(200);
-
 
     useEffect(() => {
         // Проверяем, что код выполняется на клиентской стороне
@@ -64,7 +66,6 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
         dispatch(fetchComplex({id}))
     }, [id])
 //estate_floor
-    console.log(floorPlane)
     const handleClick = (e: any) => {
         if (e.target.tagName === 'path') {
             const dataAttributeValue = e.target.getAttribute('data-num');
@@ -86,7 +87,11 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
             alignItems: 'center',
             paddingBottom: '50px'
         }}>
-            <div style={{position: 'relative', width: windowWidth - minus, height: calculateHeight(windowWidth - minus)}}>
+            <div style={{
+                position: 'relative',
+                width: windowWidth - minus,
+                height: calculateHeight(windowWidth - minus)
+            }}>
                 <div style={{
                     position: 'absolute',
                     width: '100%',
@@ -115,6 +120,8 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
             {floorPlane && <Title className={s.title}>План этажа</Title>}
             {floorPlane &&
               <Image src={floorPlane} width={windowWidth - minus} height={calculateHeight(windowWidth - minus)}/>}
+            <Title className={cn(s.title, {[s.sell]: floorPlane})}>Продается</Title>
+            <Table data={complex} columns={tableColumns}/>
             <div className={s.btnBlock}>
                 <a className={s.link} href='tel:+78007075299'>Позвонить</a>
                 <Modal onSubmit={handleSubmit}>
@@ -125,3 +132,53 @@ export const HomeObjectPage: FC<IHomeObjectProps> = ({id}) => {
     );
 };
 
+const tableColumns: ITableColumns<IComplexData>[] = [
+    {
+        className:s.tableEntrance,
+        title: '',
+        property: 'geo_house_entrance',
+        render: ({geo_house_entrance}) => <div style={{fontWeight: 500}}>Подъезд №{geo_house_entrance}</div>,
+        width: 200
+    },
+    {
+        className:s.tableFloor,
+        title: '',
+        property: 'estate_floor',
+        render: ({estate_floor}) => <div style={{fontWeight: 500}}>Этаж №{estate_floor}</div>,
+        width: 150
+    },
+    {
+        className:s.tableRooms,
+        title: '',
+        property: 'estate_rooms',
+        render: ({estate_rooms}) => <div className={s.roomCountColumn} style={{fontWeight: 500}}>{estate_rooms}К</div>,
+        width: 80
+    },
+    {
+        className: s.tableFlatnum,
+        title: '',
+        property: 'geo_flatnum',
+        render: ({geo_flatnum}) => <div style={{fontWeight: 500}}>№{geo_flatnum}</div>,
+        width: 60
+    },
+    {
+        className: s.tableArea,
+        title: '',
+        property: 'estate_area_human',
+        render: ({estate_area_human}) => <div style={{fontWeight: 500}}>{estate_area_human}м</div>,
+        width: 110
+    },
+    {
+        className: s.tablePrice,
+        title: '',
+        property: 'estate_price_human',
+        render: ({estate_price_human}) => <div style={{fontWeight: 700}}>{estate_price_human}м</div>,
+        width: 200
+    },
+    {
+        className: s.tablePricem2,
+        title: '',
+        property: 'estate_price_m2_human',
+        render: ({estate_price_m2_human}) => <div style={{fontWeight: 500}}>{estate_price_m2_human}м</div>
+    },
+]

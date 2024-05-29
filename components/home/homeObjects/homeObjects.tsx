@@ -13,8 +13,8 @@ import {PortfolioHomeObjectType} from "../../../services/homeObjectsPortfolioSli
 import {useRouter} from "next/router";
 
 export const HomeObjects = () => {
-    const [, forceUpdate] = useState();
-    const router = useRouter();
+        const [, forceUpdate] = useState();
+        const router = useRouter();
         const dispatch = useAppDispatch()
         const {fetchComplexes, fetchFacades} = complexesThunks
         const homeObjectsPortfolio = useAppSelector<PortfolioHomeObjectType[]>(state => state.homeObjectsPortfolioSlice['by-the-centenary'])
@@ -52,13 +52,13 @@ export const HomeObjects = () => {
                             <>
                                 <div className={s.item}>
                                     <Image className={s.itemImg} width={570} height={299} objectFit={"cover"}
-                                           src={homeObjectsPortfolio[0].image}/>
+                                           src={Array.isArray(homeObjectsPortfolio[0].image) ? homeObjectsPortfolio[0].image[0] : homeObjectsPortfolio[0].image}/>
                                     <h6 className={s.adress}>{homeObjectsPortfolio[0].address}</h6>
                                     <span className={s.type}>{homeObjectsPortfolio[0].name}</span>
                                 </div>
                                 <div className={s.item}>
                                     <Image className={s.itemImg} width={570} height={299} objectFit={"cover"}
-                                           src={homeObjectsPortfolio[1].image}/>
+                                           src={Array.isArray(homeObjectsPortfolio[1].image) ? homeObjectsPortfolio[1].image[0] : homeObjectsPortfolio[1].image}/>
                                     <h6 className={s.adress}>{homeObjectsPortfolio[1].address}</h6>
                                     <span className={s.type}>{homeObjectsPortfolio[1].name}</span>
                                 </div>

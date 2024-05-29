@@ -26,6 +26,22 @@
 
 .title{
   margin: 50px 0;
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &.sell{
+    margin-top: 75px;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      background: #787878;
+      height: 1px;
+      left: 0;
+      top: -26px;
+    }
+  }
 }
 
 .link{
@@ -59,6 +75,75 @@
   cursor: pointer;
 }
 
+.roomCountColumn{
+  font-size: 15px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  width: 39px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableEntrance{
+  width: 200px;
+}
+
+.tableFloor{
+  width: 150px;
+}
+
+.tableRooms{
+  width: 80px;
+}
+
+.tableArea{
+  width: 110px;
+}
+
+.tableFlatnum{
+  width: 60px;
+}
+
+.tablePrice{
+  width: 200px;
+}
+
+@media (max-width: 1030px){
+  .tableEntrance{
+    font-size: 18px;
+    width: 150px;
+  }
+  .tableFloor{
+    font-size: 18px;
+    width: 120px;
+  }
+  .roomCountColumn{
+    font-size: 12px;
+    width: 37px;
+    height: 25px;
+  }
+  .tableRooms{
+    width: 60px;
+  }
+  .tableFlatnum{
+    font-size: 18px;
+    width: 45px;
+  }
+  .tableArea{
+    font-size: 18px;
+    width: 80px;
+  }
+  .tablePrice{
+    font-size: 18px;
+    width: 140px;
+  }
+  .tablePricem2{
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 800px) {
   .address{
     font-size: 18px;
@@ -67,6 +152,38 @@
   .btn,.link{
     font-size: 16px;
     width: 250px;
+  }
+
+  .tableEntrance{
+    font-size: 14px;
+    width: 110px;
+  }
+  .tableFloor{
+    font-size: 14px;
+    width: 90px;
+  }
+  .roomCountColumn{
+    font-size: 10px;
+    width: 33px;
+    height: 22px;
+  }
+  .tableRooms{
+    width: 50px;
+  }
+  .tableFlatnum{
+    font-size: 14px;
+    width: 40px;
+  }
+  .tableArea{
+    font-size: 14px;
+    width: 60px;
+  }
+  .tablePrice{
+    font-size: 14px;
+    width: 110px;
+  }
+  .tablePricem2{
+    font-size: 14px;
   }
 }
 
